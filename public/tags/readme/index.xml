@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Readme on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/readme/</link>
+    <description>Recent content in Readme on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Apr 2026 14:30:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/readme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为什么 GitHub 项目都需要一个优秀的 README？</title>
+      <link>http://localhost:1313/posts/github-readme-guide/</link>
+      <pubDate>Wed, 22 Apr 2026 14:30:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/github-readme-guide/</guid>
+      <description>在浏览 GitHub 上的开源项目时，你可能已经注意到，几乎每个项目根目录下都会有一个名为 README.md 的文件。当你打开一个仓库时，GitHub 会自动渲染并在文件列表正下方展示这个文件的内容。&#xA;那么，为什么 README 如此重要？一个优秀的 README 又该包含哪些内容呢？&#xA;README 的核心作用 README 是项目的门面。 无论你的代码写得多优雅、功能多强大，如果没有人知道如何运行或使用它，那么这个项目的价值就会大打折扣。README 承担了“说明书”和“宣传册”的双重职责。&#xA;降低认知门槛：让路过的开发者能在 30 秒内知道“这是什么”、“它能解决什么问题”。 指导快速上手：提供明确的安装和运行步骤，避免新手在环境配置上卡壳。 建立社区共识：声明项目的开源协议、贡献指南，告诉其他人如何参与进来。 一个标准 README 的结构 虽然不同项目的 README 会有所差异，但一个优秀的开源项目通常会包含以下几个核心模块：&#xA;1. 标题与简介 (Title and Introduction) 项目的名字，以及一句话介绍。如果有 Logo 或展示项目状态的徽章（Badges，如构建状态、版本号），通常放在这里。&#xA;2. 功能特性 (Features) 简明扼要地列出项目的核心卖点。可以使用项目列表（Bullet points）让读者快速浏览。&#xA;3. 安装指南 (Installation) 详细说明如何安装和运行项目。如果是 Node 项目可能是 npm install，如果是 Python 可能是 pip install。别忘了列出前置依赖（比如要求 Node &amp;gt;= 18）。&#xA;4. 使用示例 (Usage) 给出最简单直接的代码示例或命令。如果是一个 UI 组件库，最好附上截图或 GIF 动图，让效果一目了然。&#xA;5. 常见问题 (FAQ) 记录用户经常遇到的问题及解决办法，减少维护者答疑的时间成本。&#xA;6. 参与贡献 (Contributing) 如果你希望其他人参与到你的项目中来，需要在这里说明如何提交 Issue 或 PR，或者指向专门的 CONTRIBUTING.</description>
+    </item>
+  </channel>
+</rss>

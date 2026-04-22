@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugo 性能优化与 SEO 最佳实践 | My New Hugo Site</title>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
+        header { border-bottom: 1px solid #eee; padding-bottom: 20px; margin-bottom: 20px; }
+        nav a { margin-right: 15px; color: #0066cc; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        h1 { color: #111; }
+        footer { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; font-size: 0.9em; color: #666; text-align: center; }
+        .post-list { list-style: none; padding: 0; }
+        .post-list li { margin-bottom: 15px; }
+        .post-list a { font-size: 1.2em; color: #0066cc; text-decoration: none; }
+        .post-list a:hover { text-decoration: underline; }
+        .post-meta { font-size: 0.9em; color: #666; margin-left: 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="/" style="color: inherit; text-decoration: none;">My New Hugo Site</a></h1>
+        <nav>
+            <a href="/">首页</a>
+            <a href="/posts/">文章导航</a>
+            <a href="/categories/">分类</a>
+            <a href="/tags/">标签</a>
+        </nav>
+    </header>
+
+    <main>
+        
+<article>
+  <header>
+    <h2>Hugo 性能优化与 SEO 最佳实践</h2>
+    <div style="color: #666; font-size: 0.9em; margin-bottom: 20px;">
+      发布于: 2026-04-22
+    </div>
+  </header>
+  
+  <div class="content" style="margin-top: 20px;">
+    <p>Hugo 生成的静态站点天生就非常快，但如果想要在搜索引擎中获得更好的排名（SEO）并进一步压榨性能极限，你还可以做以下优化。</p>
+<h2 id="1-完善-seo-的-meta-标签">1. 完善 SEO 的 Meta 标签</h2>
+<p>让搜索引擎准确理解页面的第一步是提供规范的 Meta 信息。在你的 <code>layouts/partials/head.html</code> 中，请确保包含标题、描述、关键词等信息：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">title</span>&gt;{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;description&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary | plainify }}{{ end }}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;keywords&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ if .Keywords }}{{ delimit .Keywords &#34;</span><span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}{{</span> <span style="color:#a6e22e">else</span> <span style="color:#a6e22e">if</span> <span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">Params</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">tags</span> <span style="color:#960050;background-color:#1e0010">}}{{</span> <span style="color:#a6e22e">delimit</span> <span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">Params</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">tags</span> <span style="color:#960050;background-color:#1e0010">&#34;,</span> <span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}{{</span> <span style="color:#a6e22e">end</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span>&gt;
+</span></span></code></pre></div><p>别忘了开启 Hugo 内置的 Open Graph 和 Twitter Cards 模板，它们能让你的链接在社交媒体分享时展现漂亮的卡片预览：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ template &#34;_internal/opengraph.html&#34; . }}
+</span></span><span style="display:flex;"><span>{{ template &#34;_internal/twitter_cards.html&#34; . }}
+</span></span></code></pre></div><h2 id="2-生成-sitemap-和-robotstxt">2. 生成 Sitemap 和 Robots.txt</h2>
+<p>Sitemap 可以引导搜索引擎的爬虫高效地抓取你的全站链接。Hugo 默认会自动生成 Sitemap。</p>
+<p>你只需在 <code>hugo.toml</code> 中配置 <code>enableRobotsTXT = true</code>，Hugo 就会在构建时自动生成一个标准的 <code>robots.txt</code>，将爬虫指向你的 Sitemap。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://example.com/&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">enableRobotsTXT</span> = <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><h2 id="3-图片处理与响应式优化-image-processing">3. 图片处理与响应式优化 (Image Processing)</h2>
+<p>图片通常是拖慢网页加载速度的罪魁祸首。Hugo 提供了强大的内置图片处理能力（基于 Go 原生库或 LibVips）。</p>
+<p>在 Markdown 的 shortcodes 或布局中，你可以将大图转换为更现代且体积更小的 webp 格式，并生成不同分辨率的 srcset：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ $image := .Resources.GetMatch &#34;hero.jpg&#34; }}
+</span></span><span style="display:flex;"><span>{{ $resized := $image.Resize &#34;800x webp q75&#34; }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $resized.RelPermalink }}&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $resized.Width }}&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $resized.Height }}&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hero Image&#34;</span>&gt;
+</span></span></code></pre></div><h2 id="4-压缩-html-css-和-js-代码">4. 压缩 HTML, CSS 和 JS 代码</h2>
+<p>部署前，务必使用 <code>--minify</code> 参数构建。它会剔除所有多余的空格、换行和注释：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo --minify
+</span></span></code></pre></div><p>此外，你可以在模板中使用 Hugo Pipes 来打包和指纹化 JS/CSS，这样不仅能减少 HTTP 请求数量，还允许配置超长的 CDN 缓存期（因为文件内容变更时 hash 会变）。</p>
+<h2 id="5-延迟加载非关键资源-lazy-loading">5. 延迟加载非关键资源 (Lazy Loading)</h2>
+<p>对于首屏看不见的图片和第三方脚本（如评论插件、分析统计代码），请务必开启延迟加载。</p>
+<p>对图片添加属性：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;...&#34;</span> <span style="color:#a6e22e">loading</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;lazy&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;...&#34;</span>&gt;
+</span></span></code></pre></div><p>对于外部脚本，考虑增加 <code>defer</code> 或 <code>async</code> 属性：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">defer</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://example.com/analytics.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>通过这些细微但重要的调整，你的网站能够在 Lighthouse 测试中轻松拿到高分，同时赢得搜索引擎爬虫的青睐！</p>
+
+  </div>
+</article>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My New Hugo Site</p>
+    </footer>
+</body>
+</html>

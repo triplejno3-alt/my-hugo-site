@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>进阶教程 on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B/</link>
+    <description>Recent content in 进阶教程 on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Apr 2026 13:50:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 进阶使用指南：打造更强大的静态网站</title>
+      <link>http://localhost:1313/posts/hugo-advanced-tutorial/</link>
+      <pubDate>Wed, 22 Apr 2026 13:50:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/hugo-advanced-tutorial/</guid>
+      <description>在掌握了 Hugo 的基础安装和简单的内容发布之后，你可能希望让你的网站具备更多功能，例如更灵活的内容组织、自定义布局、或者处理复杂的静态资源。本文将为你介绍几个 Hugo 的进阶核心概念和使用方法。&#xA;1. 深入理解 Taxonomies (分类法) 除了默认的 tags 和 categories，Hugo 允许你创建自定义的分类法来组织内容。&#xA;在 hugo.toml 中，你可以这样定义：&#xA;[taxonomies] category = &amp;#34;categories&amp;#34; tag = &amp;#34;tags&amp;#34; series = &amp;#34;series&amp;#34; # 新增的分类法 接着在你的 Markdown 前置元数据（Front Matter）中就可以使用了：&#xA;--- title: &amp;#34;Hugo 进阶教程 1&amp;#34; series: [&amp;#34;Hugo 大师之路&amp;#34;] --- 2. 拥抱 Shortcodes (短代码) Markdown 虽然方便，但有时不足以表达复杂的 HTML 结构（比如嵌入 Bilibili 视频或渲染一个特殊的提示框）。Hugo 的 Shortcodes 可以在 Markdown 中插入自定义的 HTML 模板。&#xA;首先在 layouts/shortcodes/ 下创建一个模板，例如 layouts/shortcodes/alert.html：&#xA;&amp;lt;div class=&amp;#34;alert alert-{{ .Get &amp;#34;type&amp;#34; }}&amp;#34;&amp;gt; {{ .</description>
+    </item>
+  </channel>
+</rss>

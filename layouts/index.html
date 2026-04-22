@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div style="text-align: center; padding: 40px 0;">
+  <h2>欢迎来到 {{ .Site.Title }}</h2>
+  <p>这是一个使用 Hugo 构建的静态网站。</p>
+</div>
+
+<h3>最新文章</h3>
+<ul class="post-list">
+  {{ range first 5 (where .Site.RegularPages "Type" "posts") }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <span class="post-meta">{{ .Date.Format "2006-01-02" }}</span>
+    </li>
+  {{ end }}
+</ul>
+
+<div style="margin-top: 20px;">
+  <a href="/posts/">查看所有文章 &rarr;</a>
+</div>
+{{ end }}

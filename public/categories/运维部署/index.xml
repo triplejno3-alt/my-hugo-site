@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>运维部署 on My New Hugo Site</title>
+    <link>http://localhost:1313/categories/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/</link>
+    <description>Recent content in 运维部署 on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Apr 2026 14:10:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E8%BF%90%E7%BB%B4%E9%83%A8%E7%BD%B2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>将 Hugo 站点自动化部署到 GitHub Pages</title>
+      <link>http://localhost:1313/posts/hugo-deploy-github-pages/</link>
+      <pubDate>Wed, 22 Apr 2026 14:10:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/hugo-deploy-github-pages/</guid>
+      <description>GitHub Pages 是托管静态站点的绝佳免费平台，结合 GitHub Actions，我们可以实现“只要提交代码（Git Push），网站就自动构建并上线”的自动化部署工作流。&#xA;1. 准备工作 首先，确保你已经将你的 Hugo 项目推送到 GitHub 仓库。如果是个人博客，通常建议仓库名称设为 &amp;lt;username&amp;gt;.github.io，这样访问链接会更短更优雅。&#xA;在 hugo.toml 中，确保你的 baseURL 配置正确：&#xA;baseURL = &amp;#34;https://&amp;lt;你的用户名&amp;gt;.github.io/&amp;#34; 2. 编写 GitHub Actions 工作流文件 在项目根目录下创建一个特殊的目录和文件：.github/workflows/hugo.yaml，并写入以下配置：&#xA;name: Deploy Hugo site to Pages on: push: branches: - main # 或者 master，视你的默认分支而定 jobs: build: runs-on: ubuntu-latest steps: - name: Checkout uses: actions/checkout@v4 with: submodules: true # 如果你使用 Git Submodules 引入主题，请确保开启此项 fetch-depth: 0 # 抓取完整历史记录，以便 Hugo 能正确计算 .GitInfo 等时间 - name: Setup Hugo uses: peaceiris/actions-hugo@v3 with: hugo-version: &amp;#39;latest&amp;#39; extended: true # 如果你的主题使用了 SCSS，需开启扩展版本 - name: Build run: hugo --minify - name: Deploy uses: peaceiris/actions-gh-pages@v3 with: github_token: ${{ secrets.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugo 快速入门教程 | My New Hugo Site</title>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
+        header { border-bottom: 1px solid #eee; padding-bottom: 20px; margin-bottom: 20px; }
+        nav a { margin-right: 15px; color: #0066cc; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        h1 { color: #111; }
+        footer { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; font-size: 0.9em; color: #666; text-align: center; }
+        .post-list { list-style: none; padding: 0; }
+        .post-list li { margin-bottom: 15px; }
+        .post-list a { font-size: 1.2em; color: #0066cc; text-decoration: none; }
+        .post-list a:hover { text-decoration: underline; }
+        .post-meta { font-size: 0.9em; color: #666; margin-left: 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="/" style="color: inherit; text-decoration: none;">My New Hugo Site</a></h1>
+        <nav>
+            <a href="/">首页</a>
+            <a href="/posts/">文章导航</a>
+            <a href="/categories/">分类</a>
+            <a href="/tags/">标签</a>
+        </nav>
+    </header>
+
+    <main>
+        
+<article>
+  <header>
+    <h2>Hugo 快速入门教程</h2>
+    <div style="color: #666; font-size: 0.9em; margin-bottom: 20px;">
+      发布于: 2026-04-22
+    </div>
+  </header>
+  
+  <div class="content" style="margin-top: 20px;">
+    <h1 id="hugo-快速入门教程">Hugo 快速入门教程</h1>
+<p>Hugo 是目前最快的静态网站生成器之一，使用 Go 语言编写，具有极快的构建速度和强大的功能特性。</p>
+<h2 id="-安装-hugo">🚀 安装 Hugo</h2>
+<h3 id="系统要求">系统要求</h3>
+<ul>
+<li>任意现代操作系统（Linux / macOS / Windows）</li>
+<li>Git 版本控制工具</li>
+</ul>
+<h3 id="安装命令">安装命令</h3>
+<p><strong>Linux / macOS</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install hugo
+</span></span></code></pre></div><p><strong>Debian / Ubuntu</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install hugo
+</span></span></code></pre></div><p>安装完成后验证版本：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo version
+</span></span></code></pre></div><h2 id="-创建第一个站点">📦 创建第一个站点</h2>
+<ol>
+<li>新建项目：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site my-hugo-site
+</span></span><span style="display:flex;"><span>cd my-hugo-site
+</span></span></code></pre></div><ol start="2">
+<li>初始化 Git 仓库：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git init
+</span></span></code></pre></div><ol start="3">
+<li>安装主题（以 PaperMod 为例）：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+</span></span></code></pre></div><h2 id="-创建文章">✍️ 创建文章</h2>
+<p>使用 Hugo 命令创建新文章：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new posts/your-first-post.md
+</span></span></code></pre></div><p>文章默认使用 Markdown 格式，支持完整的 Front Matter 元数据：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;文章标题&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">date</span> = <span style="color:#e6db74">2026-04-22T12:00:00+08:00</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">draft</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">tags</span> = [<span style="color:#e6db74">&#34;标签1&#34;</span>, <span style="color:#e6db74">&#34;标签2&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">categories</span> = [<span style="color:#e6db74">&#34;分类&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">这里是你的文章内容</span>...
+</span></span></code></pre></div><h2 id="-本地开发">🔧 本地开发</h2>
+<p>启动开发服务器：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server -D
+</span></span></code></pre></div><p>访问地址：<code>http://localhost:1313</code></p>
+<p>特性：</p>
+<ul>
+<li>✅ 实时热重载</li>
+<li>✅ 草稿文章预览</li>
+<li>✅ 自动浏览器刷新</li>
+<li>✅ 构建速度极快</li>
+</ul>
+<h2 id="-构建发布">🚀 构建发布</h2>
+<p>生成生产环境静态文件：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo --minify
+</span></span></code></pre></div><p>所有生成的静态文件将输出到 <code>public/</code> 目录，可以直接部署到任意静态文件托管服务：</p>
+<ul>
+<li>GitHub Pages</li>
+<li>Vercel</li>
+<li>Netlify</li>
+<li>Cloudflare Pages</li>
+<li>传统 Web 服务器</li>
+</ul>
+<h2 id="-最佳实践">💡 最佳实践</h2>
+<ol>
+<li><strong>始终使用 archetypes 模板</strong> 统一文章格式</li>
+<li><strong>合理使用标签和分类</strong> 组织内容</li>
+<li><strong>图片资源放在 static 目录</strong> 下管理</li>
+<li><strong>定期更新主题</strong> 保持安全和功能更新</li>
+<li><strong>配置 .gitignore</strong> 排除临时文件</li>
+</ol>
+<h2 id="-相关资源">📚 相关资源</h2>
+<ul>
+<li>官方文档：https://gohugo.io/documentation/</li>
+<li>主题市场：https://themes.gohugo.io/</li>
+<li>社区论坛：https://discourse.gohugo.io/</li>
+</ul>
+<hr>
+<blockquote>
+<p>本教程持续更新中，欢迎提出改进建议。</p>
+</blockquote>
+
+  </div>
+</article>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My New Hugo Site</p>
+    </footer>
+</body>
+</html>

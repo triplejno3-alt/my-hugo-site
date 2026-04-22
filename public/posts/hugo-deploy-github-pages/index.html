@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>将 Hugo 站点自动化部署到 GitHub Pages | My New Hugo Site</title>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
+        header { border-bottom: 1px solid #eee; padding-bottom: 20px; margin-bottom: 20px; }
+        nav a { margin-right: 15px; color: #0066cc; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        h1 { color: #111; }
+        footer { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; font-size: 0.9em; color: #666; text-align: center; }
+        .post-list { list-style: none; padding: 0; }
+        .post-list li { margin-bottom: 15px; }
+        .post-list a { font-size: 1.2em; color: #0066cc; text-decoration: none; }
+        .post-list a:hover { text-decoration: underline; }
+        .post-meta { font-size: 0.9em; color: #666; margin-left: 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="/" style="color: inherit; text-decoration: none;">My New Hugo Site</a></h1>
+        <nav>
+            <a href="/">首页</a>
+            <a href="/posts/">文章导航</a>
+            <a href="/categories/">分类</a>
+            <a href="/tags/">标签</a>
+        </nav>
+    </header>
+
+    <main>
+        
+<article>
+  <header>
+    <h2>将 Hugo 站点自动化部署到 GitHub Pages</h2>
+    <div style="color: #666; font-size: 0.9em; margin-bottom: 20px;">
+      发布于: 2026-04-22
+    </div>
+  </header>
+  
+  <div class="content" style="margin-top: 20px;">
+    <p>GitHub Pages 是托管静态站点的绝佳免费平台，结合 GitHub Actions，我们可以实现“只要提交代码（Git Push），网站就自动构建并上线”的自动化部署工作流。</p>
+<h2 id="1-准备工作">1. 准备工作</h2>
+<p>首先，确保你已经将你的 Hugo 项目推送到 GitHub 仓库。如果是个人博客，通常建议仓库名称设为 <code>&lt;username&gt;.github.io</code>，这样访问链接会更短更优雅。</p>
+<p>在 <code>hugo.toml</code> 中，确保你的 <code>baseURL</code> 配置正确：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://&lt;你的用户名&gt;.github.io/&#34;</span>
+</span></span></code></pre></div><h2 id="2-编写-github-actions-工作流文件">2. 编写 GitHub Actions 工作流文件</h2>
+<p>在项目根目录下创建一个特殊的目录和文件：<code>.github/workflows/hugo.yaml</code>，并写入以下配置：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy Hugo site to Pages</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">main</span> <span style="color:#75715e"># 或者 master，视你的默认分支而定</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Checkout</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v4</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">submodules</span>: <span style="color:#66d9ef">true</span>  <span style="color:#75715e"># 如果你使用 Git Submodules 引入主题，请确保开启此项</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">fetch-depth</span>: <span style="color:#ae81ff">0</span>    <span style="color:#75715e"># 抓取完整历史记录，以便 Hugo 能正确计算 .GitInfo 等时间</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup Hugo</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#39;latest&#39;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">extended</span>: <span style="color:#66d9ef">true</span>    <span style="color:#75715e"># 如果你的主题使用了 SCSS，需开启扩展版本</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">hugo --minify</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-gh-pages@v3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">github_token</span>: <span style="color:#ae81ff">${{ secrets.GITHUB_TOKEN }}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">publish_dir</span>: <span style="color:#ae81ff">./public</span>
+</span></span></code></pre></div><h2 id="3-推送并观察构建">3. 推送并观察构建</h2>
+<p>将上面的文件提交并 Push 到 GitHub 后，点击仓库页面的 <strong>Actions</strong> 标签页，你会看到一个名为 <code>Deploy Hugo site to Pages</code> 的任务正在运行。</p>
+<p>这个任务会自动执行：</p>
+<ol>
+<li>拉取你的源码</li>
+<li>安装最新的 Hugo 环境</li>
+<li>运行 <code>hugo --minify</code> 将静态文件生成至 <code>public</code> 目录</li>
+<li>将 <code>public</code> 目录的内容推送到名为 <code>gh-pages</code> 的特殊分支中。</li>
+</ol>
+<h2 id="4-开启-github-pages">4. 开启 GitHub Pages</h2>
+<p>任务成功后，进入仓库的 <strong>Settings</strong> -&gt; <strong>Pages</strong>。</p>
+<p>在 &ldquo;Build and deployment&rdquo; 的 &ldquo;Source&rdquo; 中，选择 <strong>Deploy from a branch</strong>。在下方的 Branch 选择下拉框中，选择刚刚构建产生的 <code>gh-pages</code> 分支，保存。</p>
+<p>稍等片刻，访问 <code>https://&lt;你的用户名&gt;.github.io/</code>，你的网站就成功上线了！以后每次写完新文章只需执行 <code>git push</code>，剩下的就交给 GitHub 自动完成吧。</p>
+
+  </div>
+</article>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My New Hugo Site</p>
+    </footer>
+</body>
+</html>
