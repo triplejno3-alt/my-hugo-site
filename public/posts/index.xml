@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>https://example.org/posts/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Apr 2026 12:01:00 +0800</lastBuildDate>
+    <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 快速入门教程</title>
+      <link>https://example.org/posts/hugo-quick-start-tutorial/</link>
+      <pubDate>Wed, 22 Apr 2026 12:01:00 +0800</pubDate>
+      <guid>https://example.org/posts/hugo-quick-start-tutorial/</guid>
+      <description>Hugo 快速入门教程 Hugo 是目前最快的静态网站生成器之一，使用 Go 语言编写，具有极快的构建速度和强大的功能特性。&#xA;🚀 安装 Hugo 系统要求 任意现代操作系统（Linux / macOS / Windows） Git 版本控制工具 安装命令 Linux / macOS&#xA;brew install hugo Debian / Ubuntu&#xA;sudo apt install hugo 安装完成后验证版本：&#xA;hugo version 📦 创建第一个站点 新建项目： hugo new site my-hugo-site cd my-hugo-site 初始化 Git 仓库： git init 安装主题（以 PaperMod 为例）： git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod ✍️ 创建文章 使用 Hugo 命令创建新文章：&#xA;hugo new posts/your-first-post.md 文章默认使用 Markdown 格式，支持完整的 Front Matter 元数据：</description>
+    </item>
+  </channel>
+</rss>

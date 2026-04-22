@@ -1,0 +1,12 @@
+nohup: ignoring input
+WARN  Module "ananke" is not compatible with this Hugo version: Min 0.160.0; run "hugo mod graph" for more information.
+Watching for changes in /home/book/my-hugo-site/{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in /home/book/my-hugo-site/hugo.toml, /home/book/my-hugo-site/themes/ananke/config/_default
+Start building sites … 
+hugo v0.123.7+extended linux/amd64 BuildDate=2025-07-18T03:41:49Z VendorInfo=ubuntu:0.123.7-1ubuntu0.3
+
+WARN  found no layout file for "html" for kind "taxonomy": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN  found no layout file for "html" for kind "section": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+ERROR render of "404" failed: "/home/book/my-hugo-site/themes/ananke/layouts/baseof.html:2:15": execute of template failed: template: 404.html:2:15: executing "404.html" at <site>: can't evaluate field Locale in type *langs.Language
+Built in 3 ms
+Error: error building site: render: failed to render pages: render of "home" failed: "/home/book/my-hugo-site/themes/ananke/layouts/baseof.html:2:15": execute of template failed: template: home.html:2:15: executing "home.html" at <site>: can't evaluate field Locale in type *langs.Language
