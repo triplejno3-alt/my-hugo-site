@@ -2,20 +2,77 @@
 
 这是一个基于 [Hugo](https://gohugo.io/) 构建的静态网站项目。
 
-## 项目结构说明
+## 项目结构
 
-当前项目的目录结构及其作用如下：
+以下是当前项目的完整目录结构：
 
-- `archetypes/`：内容模板目录。当您使用 `hugo new` 命令创建新内容时，Hugo 会使用此目录下的模板（如 `default.md`）生成带有默认前置元数据（Front Matter）的文件。
-- `assets/`：用于存放需要经过 Hugo 资产管道（Asset Pipeline）处理的文件，如 Sass/SCSS、JavaScript 或需要压缩、指纹处理的图片。
-- `content/`：网站的内容目录。所有 Markdown 格式的文章和页面都放在这里。例如 `content/posts/` 存放博客文章。
-- `data/`：用于存放数据文件（如 JSON, YAML, TOML 格式）。Hugo 可以在生成页面时读取这些数据。
-- `i18n/`：国际化（i18n）配置目录。存放多语言翻译字典文件。
-- `layouts/`：自定义模板目录。存放在此处的模板会覆盖主题（Theme）中的同名模板。可以用来定制网站布局。
+```text
+.
+├── archetypes/           # 内容模板目录
+│   └── default.md        # 默认前置元数据模板
+├── assets/               # 需要经过 Hugo 资产管道处理的文件（空）
+├── content/              # 网站内容目录
+│   └── posts/            # 博客文章集合
+│       ├── hello-world.md
+│       ├── hugo-advanced-tutorial.md
+│       ├── hugo-deploy-github-pages.md
+│       ├── hugo-quick-start-tutorial.md
+│       ├── hugo-seo-performance.md
+│       └── hugo-theme-development.md
+├── data/                 # 存放数据文件（空）
+├── i18n/                 # 国际化翻译字典文件（空）
+├── layouts/              # 自定义模板目录（空）
+├── public/               # Hugo 编译后生成的静态站点文件输出目录
+│   ├── 404.html
+│   ├── index.html
+│   ├── index.xml
+│   ├── sitemap.xml
+│   ├── assets/
+│   │   └── css/
+│   │       └── stylesheet.4b72e7725c68fccaac08b7b94b4bf3724ac8531837c6717dbd3e55b5a23b0117.css
+│   ├── categories/
+│   │   ├── index.html
+│   │   ├── index.xml
+│   │   └── 开发指南/
+│   │       └── index.xml
+│   ├── images/
+│   │   └── gohugo-default-sample-hero-image.jpg
+│   ├── page/
+│   │   └── 1/
+│   │       └── index.html
+│   ├── posts/
+│   │   ├── index.html
+│   │   ├── index.xml
+│   │   ├── hello-world/
+│   │   │   └── index.html
+│   │   └── page/
+│   │       └── 1/
+│   │           └── index.html
+│   └── tags/
+│       ├── index.html
+│       ├── index.xml
+│       ├── hugo/
+│       │   └── index.xml
+│       ├── 教程/
+│       │   └── index.xml
+│       └── 静态站点/
+│           └── index.xml
+├── static/               # 静态资源目录（空）
+├── themes/               # 主题目录（空）
+├── README.md             # 项目说明文件
+├── hugo.toml             # 主配置文件
+├── hugo.log              # Hugo 运行日志
+├── .hugo_build.lock      # Hugo 构建锁文件
+└── .gitmodules           # Git 子模块配置
+```
+
+### 目录作用说明
+
+- `archetypes/`：内容模板目录。使用 `hugo new` 命令时会使用此目录下的模板生成文件。
+- `content/`：网站的内容目录。所有 Markdown 格式的文章和页面都放在这里。
 - `public/`：Hugo 编译后生成的静态站点文件默认存放在这里。**注意：此目录下的文件由 Hugo 自动生成，请勿手动修改。**
-- `static/`：静态资源目录。存放在这里的所有文件或目录在构建时会原封不动地复制到 `public/` 目录的根节点下。适合存放不需要处理的图片、CSS、JS、favicon 等。
-- `themes/`：主题目录。下载或添加的 Hugo 主题均存放在此。
-- `hugo.toml`：Hugo 项目的主配置文件，用于配置网站基础信息、菜单、参数以及指定主题等。
+- `static/`：静态资源目录。构建时会原封不动地复制到 `public/` 目录中。
+- `hugo.toml`：Hugo 项目的主配置文件。
 
 ## 常用命令
 
@@ -33,15 +90,11 @@ hugo server -D
 ```bash
 hugo new posts/my-new-post.md
 ```
-在 `content/posts/` 目录下创建一篇名为 `my-new-post.md` 的新文章。
+在 `content/posts/` 目录下创建新文章。
 
 ### 构建静态站点
 
 ```bash
-hugo
-```
-生成最终的静态站点文件，输出到 `public/` 目录。可以配合 `--minify` 参数压缩 HTML/CSS/JS 等资源：
-
-```bash
 hugo --minify
 ```
+生成最终的静态站点文件并进行压缩优化，输出到 `public/` 目录。
