@@ -3,14 +3,14 @@
 本工作流旨在引导 Cline 协助用户按照“少数派 (sspai) 风格”创作并发布高质量的 Hugo 博客文章。
 
 ## 触发条件 (Triggers)
-- 用户表达想要写新文章的意图（例如：“我想写一篇关于...的文章”）。
+- 用户表达想要写新文章的意图。
 - 用户提供了一个文章标题或草稿。
 
 ## 执行步骤 (Steps)
 
 ### 1. 初始化与选题确认
 - **动作**：使用 `ask_followup_question` 询问核心主题。
-- **优化**：提供 `options` 供用户快速选择倾向的方向（如：效率工具、技术教程、深度评测、生活记录）。
+- **优化**：提供 `options` 供用户快速选择方向（如：效率工具、技术分享、深度评测、生活记录）。
 - **目标**：确保符合 `.clinerules/sspai-article-writing.md` 中的“拒绝冗余”原则。
 
 ### 2. 生成文章结构建议
@@ -37,13 +37,12 @@
 ### 5. 质量检查与预览
 - **动作**：
     - 运行 `hugo` 命令检查构建是否报错。
-    - 扫描全文，检查是否符合 `.clinerules/sspai-article-writing.md` 的所有硬性规范。
-    - 提示用户在需要的地方插入图片。
+    - 扫描全文，检查是否符合 `.clinerules/sspai-article-writing.md` 的硬性规范。
 
-### 6. 自动提交与部署建议
+### 6. 自动提交与部署
 - **动作**：确认内容无误后，询问用户是否提交到 Git。
-- **规范**：使用 Conventional Commits 格式（例如：`feat(content): 添加关于 [主题] 的新文章`）。
+- **规范**：使用 Conventional Commits 格式。
 
 ## 关联规则
-- `.clinerules/sspai-article-writing.md` (核心写作规范)
-- `.clinerules/hugo-site-development.md` (开发与 Git 规范)
+- `.clinerules/sspai-article-writing.md`
+- `.clinerules/hugo-site-development.md`
