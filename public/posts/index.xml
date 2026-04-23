@@ -6,8 +6,29 @@
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Apr 2026 14:45:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2026 09:33:14 +0800</lastBuildDate>
     <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从手动到全自动：Hugo 站点的 GitHub Actions 部署实战</title>
+      <link>https://example.org/posts/hugo-automation-deployment-guide/</link>
+      <pubDate>Thu, 23 Apr 2026 09:33:14 +0800</pubDate>
+      <guid>https://example.org/posts/hugo-automation-deployment-guide/</guid>
+      <description>引言 静态站点的魅力在于其极致的访问速度和简单的架构，但如果你仍然在本地手动运行 hugo 命令，然后再通过 FTP 或 Git 手动上传 public 目录，那么部署过程很快就会成为创作的累赘。真正的现代化工作流应该是：你只管写字，剩下的交给自动化。&#xA;准备工作：环境与权限 在开始之前，请确保你的 Hugo 项目已经托管在 GitHub 仓库中。&#xA;为什么选择 GitHub Actions？ 作为 GitHub 原生的自动化工具，Actions 无需配置额外的 Webhooks，且对开源项目完全免费。它能直接读取你的源码，在云端虚拟机中完成构建，并安全地将产物推送到 GitHub Pages 或其他托管平台。&#xA;核心配置：编写部署工作流 在项目根目录下创建 .github/workflows/deploy.yml 文件。以下是一个经过优化的配置示例：&#xA;name: Deploy Hugo Site on: push: branches: - main # 或者是你的主分支名 jobs: build-deploy: runs-on: ubuntu-latest steps: - name: Checkout uses: actions/checkout@v4 with: submodules: recursive fetch-depth: 0 - name: Setup Hugo uses: peaceiris/actions-hugo@v3 with: hugo-version: &amp;#39;latest&amp;#39; extended: true - name: Build run: hugo --minify - name: Deploy uses: peaceiris/actions-gh-pages@v4 with: github_token: ${{ secrets.</description>
+    </item>
+    <item>
+      <title>从零开始：macOS 快捷指令自动化入门指南</title>
+      <link>https://example.org/posts/macos-shortcuts-automation-guide/</link>
+      <pubDate>Thu, 23 Apr 2026 09:28:11 +0800</pubDate>
+      <guid>https://example.org/posts/macos-shortcuts-automation-guide/</guid>
+      <description>引言 曾几何时，“自动化”这个词听起来像是程序员的专属。但随着 macOS 引入“快捷指令”（Shortcuts），每一个普通用户都拥有了将复杂任务简化的能力。如果你发现自己每天都在重复相同的操作——比如重命名图片、切换工作环境、提取文本——那么这篇文章就是为你准备的。&#xA;核心理念：什么是“自动化思维”？ 在开始动手之前，我们需要建立一个简单的逻辑模型：输入 -&amp;gt; 动作 -&amp;gt; 输出。&#xA;输入：你丢给电脑的东西（如一张图片、一段文字或一个时间点）。 动作：电脑对输入做的处理（如修改尺寸、翻译、发送邮件）。 输出：你想要的结果。 快捷指令的核心，就是通过可视化的模块，把这些“动作”像搭积木一样串联起来。&#xA;实战演示：三个改变效率的小例子 1. 一键处理配图：博主必备 处理博客配图时，我们通常需要：压缩、重命名、转为 WebP 格式。&#xA;快捷指令逻辑：获取所选文件 -&amp;gt; 调整图像大小 (2000px) -&amp;gt; 设置名称 (日期-项目) -&amp;gt; 转换图像格式 -&amp;gt; 保存。 优势：原本 2 分钟的操作，现在只需右键一按。 2. “专注模式”自动切换 当你点击“开启工作”指令时：&#xA;动作：开启“专注模式” -&amp;gt; 打开常用的办公应用 (如 Notion、VS Code) -&amp;gt; 播放指定的音乐列表 -&amp;gt; 隐藏其他无关窗口。 优势：通过仪式感的自动化，快速进入心流状态。 3. 快速生成会议日记 动作：获取当前日期 -&amp;gt; 从日历获取最近的会议标题 -&amp;gt; 创建一个新的 Markdown 笔记 -&amp;gt; 自动填入模板。 优势：不再为整理会议纪要的开头而烦恼。 进阶：如何获取更多高质量指令？ 你不需要从头开始发明轮子。&#xA;官方中心：快捷指令 App 自带的“中心” (Gallery) 有大量经过苹果官方审核的模版。 社区分享：少数派社区、RoutineHub 等平台有全球开发者分享的复杂工作流。建议先下载现成的指令，通过观察它们的“积木”连接方式来学习逻辑。 总结 自动化不是为了炫技，而是为了把宝贵的时间从琐碎中解放出来，去投入到真正需要人类思考的创造性工作中。现在，打开你的“快捷指令” App，尝试搭建你的第一个积木吧。</description>
+    </item>
+    <item>
+      <title>脱离鼠标：macOS 进阶生产力快捷键完全指南</title>
+      <link>https://example.org/posts/macos-shortcuts-productivity-guide/</link>
+      <pubDate>Thu, 23 Apr 2026 09:24:46 +0800</pubDate>
+      <guid>https://example.org/posts/macos-shortcuts-productivity-guide/</guid>
+      <description>引言 为什么你应该学会放下鼠标？在 macOS 的交互哲学中，键盘不仅仅是输入字符的工具，更是深度控制系统的中枢。掌握快捷键不仅是为了“快”，更是为了保持思维的连续性，避免频繁在键盘与鼠标/触控板之间切换带来的注意力碎片化。&#xA;全局掌控：那些被忽视的系统级组合 聚焦搜索 (Spotlight) 的多面手 大多数人只知道用 Command-Space 搜索文件，但它其实是一个强大的启动器和计算器：&#xA;快速计算：直接输入 128 * 64 即可获得结果。 汇率转换：输入 100 USD 快速查看当前汇率下的人民币金额。 定义查询：输入单词后按下 Command-L 直接跳转至词典定义。 调度中心 (Mission Control) 与窗口管理 展示所有窗口：Control-↑。 显示当前应用的窗口：Control-↓，这在处理多个 Excel 或 Word 文档时非常高效。 快速显示桌面：Command-F3（在某些 Mac 上是 Fn 键配合使用）。 文本之禅：手指不离开主键盘区的编辑艺术 如果你还在依赖方向键来移动光标，那么你还没能发挥出 macOS 作为类 Unix 系统的潜力：&#xA;快速移动光标： Option-←/→：以单词为单位跳跃。 Command-←/→：直接跳转至行首或行尾。 精准删除： Option-Delete：删除左侧的一个单词。 Command-Delete：删除整行。 符号与表情：Control-Command-Space 快速呼出 Emoji 和特殊字符选择器。 窗口管理：让桌面井然有序的秘密 隐藏当前窗口：Command-H。 隐藏除当前窗口外的所有窗口：Option-Command-H。这在你需要进入“深度专注”模式时非常有用。 关闭当前窗口：Command-W。 完全退出应用：Command-Q。 结语 肌肉记忆的养成非一日之功。建议你每次挑选 2-3 个快捷键强迫自己在一周内频繁使用，直到它们成为你身体本能的一部分。你会发现，当你真正“脱离”鼠标时，你的创造力流淌得比以往任何时候都要顺畅。&#xA;提示：读者可在此处插入自己 macOS 桌面的 Mission Control 界面截图，以增加代入感。</description>
+    </item>
     <item>
       <title>新人报到：即将成为无业游民的我，靠这套设备和应用保持生活节拍</title>
       <link>https://example.org/posts/sspai-newcomer-introduction/</link>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>教程 on My New Hugo Site</title>
-    <link>https://example.org/tags/%E6%95%99%E7%A8%8B/</link>
-    <description>Recent content in 教程 on My New Hugo Site</description>
+    <title>MacOS on My New Hugo Site</title>
+    <link>https://example.org/tags/macos/</link>
+    <description>Recent content in MacOS on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 23 Apr 2026 09:28:11 +0800</lastBuildDate>
-    <atom:link href="https://example.org/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/tags/macos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>从零开始：macOS 快捷指令自动化入门指南</title>
       <link>https://example.org/posts/macos-shortcuts-automation-guide/</link>
@@ -21,13 +21,6 @@
       <pubDate>Thu, 23 Apr 2026 09:24:46 +0800</pubDate>
       <guid>https://example.org/posts/macos-shortcuts-productivity-guide/</guid>
       <description>引言 为什么你应该学会放下鼠标？在 macOS 的交互哲学中，键盘不仅仅是输入字符的工具，更是深度控制系统的中枢。掌握快捷键不仅是为了“快”，更是为了保持思维的连续性，避免频繁在键盘与鼠标/触控板之间切换带来的注意力碎片化。&#xA;全局掌控：那些被忽视的系统级组合 聚焦搜索 (Spotlight) 的多面手 大多数人只知道用 Command-Space 搜索文件，但它其实是一个强大的启动器和计算器：&#xA;快速计算：直接输入 128 * 64 即可获得结果。 汇率转换：输入 100 USD 快速查看当前汇率下的人民币金额。 定义查询：输入单词后按下 Command-L 直接跳转至词典定义。 调度中心 (Mission Control) 与窗口管理 展示所有窗口：Control-↑。 显示当前应用的窗口：Control-↓，这在处理多个 Excel 或 Word 文档时非常高效。 快速显示桌面：Command-F3（在某些 Mac 上是 Fn 键配合使用）。 文本之禅：手指不离开主键盘区的编辑艺术 如果你还在依赖方向键来移动光标，那么你还没能发挥出 macOS 作为类 Unix 系统的潜力：&#xA;快速移动光标： Option-←/→：以单词为单位跳跃。 Command-←/→：直接跳转至行首或行尾。 精准删除： Option-Delete：删除左侧的一个单词。 Command-Delete：删除整行。 符号与表情：Control-Command-Space 快速呼出 Emoji 和特殊字符选择器。 窗口管理：让桌面井然有序的秘密 隐藏当前窗口：Command-H。 隐藏除当前窗口外的所有窗口：Option-Command-H。这在你需要进入“深度专注”模式时非常有用。 关闭当前窗口：Command-W。 完全退出应用：Command-Q。 结语 肌肉记忆的养成非一日之功。建议你每次挑选 2-3 个快捷键强迫自己在一周内频繁使用，直到它们成为你身体本能的一部分。你会发现，当你真正“脱离”鼠标时，你的创造力流淌得比以往任何时候都要顺畅。&#xA;提示：读者可在此处插入自己 macOS 桌面的 Mission Control 界面截图，以增加代入感。</description>
-    </item>
-    <item>
-      <title>Hugo 快速入门教程</title>
-      <link>https://example.org/posts/hugo-quick-start-tutorial/</link>
-      <pubDate>Wed, 22 Apr 2026 12:01:00 +0800</pubDate>
-      <guid>https://example.org/posts/hugo-quick-start-tutorial/</guid>
-      <description>Hugo 快速入门教程 Hugo 是目前最快的静态网站生成器之一，使用 Go 语言编写，具有极快的构建速度和强大的功能特性。&#xA;🚀 安装 Hugo 系统要求 任意现代操作系统（Linux / macOS / Windows） Git 版本控制工具 安装命令 Linux / macOS&#xA;brew install hugo Debian / Ubuntu&#xA;sudo apt install hugo 安装完成后验证版本：&#xA;hugo version 📦 创建第一个站点 新建项目： hugo new site my-hugo-site cd my-hugo-site 初始化 Git 仓库： git init 安装主题（以 PaperMod 为例）： git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod ✍️ 创建文章 使用 Hugo 命令创建新文章：&#xA;hugo new posts/your-first-post.md 文章默认使用 Markdown 格式，支持完整的 Front Matter 元数据：</description>
     </item>
   </channel>
 </rss>

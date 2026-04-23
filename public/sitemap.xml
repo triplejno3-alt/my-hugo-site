@@ -3,16 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://example.org/categories/</loc>
-    <lastmod>2026-04-22T14:45:00+08:00</lastmod>
+    <lastmod>2026-04-23T09:33:14+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/ci/cd/</loc>
+    <lastmod>2026-04-23T09:33:14+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/github-actions/</loc>
+    <lastmod>2026-04-23T09:33:14+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/hugo/</loc>
+    <lastmod>2026-04-23T09:33:14+08:00</lastmod>
   </url><url>
     <loc>https://example.org/</loc>
-    <lastmod>2026-04-22T14:45:00+08:00</lastmod>
+    <lastmod>2026-04-23T09:33:14+08:00</lastmod>
   </url><url>
     <loc>https://example.org/posts/</loc>
-    <lastmod>2026-04-22T14:45:00+08:00</lastmod>
+    <lastmod>2026-04-23T09:33:14+08:00</lastmod>
   </url><url>
     <loc>https://example.org/tags/</loc>
-    <lastmod>2026-04-22T14:45:00+08:00</lastmod>
+    <lastmod>2026-04-23T09:33:14+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/posts/hugo-automation-deployment-guide/</loc>
+    <lastmod>2026-04-23T09:33:14+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/categories/%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2026-04-23T09:33:14+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</loc>
+    <lastmod>2026-04-23T09:33:14+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/macos/</loc>
+    <lastmod>2026-04-23T09:28:11+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/posts/macos-shortcuts-automation-guide/</loc>
+    <lastmod>2026-04-23T09:28:11+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4/</loc>
+    <lastmod>2026-04-23T09:28:11+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/categories/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2026-04-23T09:28:11+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2026-04-23T09:28:11+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/</loc>
+    <lastmod>2026-04-23T09:28:11+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    <lastmod>2026-04-23T09:24:46+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/%E7%94%9F%E4%BA%A7%E5%8A%9B/</loc>
+    <lastmod>2026-04-23T09:24:46+08:00</lastmod>
+  </url><url>
+    <loc>https://example.org/posts/macos-shortcuts-productivity-guide/</loc>
+    <lastmod>2026-04-23T09:24:46+08:00</lastmod>
   </url><url>
     <loc>https://example.org/categories/%E5%B0%91%E6%95%B0%E6%B4%BE%E6%8A%A5%E9%81%93/</loc>
     <lastmod>2026-04-22T14:45:00+08:00</lastmod>
@@ -44,9 +89,6 @@
     <loc>https://example.org/tags/%E5%BC%80%E6%BA%90%E6%8C%87%E5%8D%97/</loc>
     <lastmod>2026-04-22T14:30:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/hugo/</loc>
-    <lastmod>2026-04-22T14:20:00+08:00</lastmod>
-  </url><url>
     <loc>https://example.org/posts/hugo-seo-performance/</loc>
     <lastmod>2026-04-22T14:20:00+08:00</lastmod>
   </url><url>
@@ -58,12 +100,6 @@
   </url><url>
     <loc>https://example.org/categories/%E8%BF%9B%E9%98%B6%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2026-04-22T14:20:00+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/tags/ci/cd/</loc>
-    <lastmod>2026-04-22T14:10:00+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/tags/github-actions/</loc>
-    <lastmod>2026-04-22T14:10:00+08:00</lastmod>
   </url><url>
     <loc>https://example.org/posts/hugo-deploy-github-pages/</loc>
     <lastmod>2026-04-22T14:10:00+08:00</lastmod>
@@ -77,9 +113,6 @@
     <loc>https://example.org/tags/%E4%B8%BB%E9%A2%98%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2026-04-22T14:00:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/</loc>
-    <lastmod>2026-04-22T14:00:00+08:00</lastmod>
-  </url><url>
     <loc>https://example.org/posts/hugo-advanced-tutorial/</loc>
     <lastmod>2026-04-22T13:50:00+08:00</lastmod>
   </url><url>
@@ -90,9 +123,6 @@
     <lastmod>2026-04-22T13:50:00+08:00</lastmod>
   </url><url>
     <loc>https://example.org/posts/hugo-quick-start-tutorial/</loc>
-    <lastmod>2026-04-22T12:01:00+08:00</lastmod>
-  </url><url>
-    <loc>https://example.org/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2026-04-22T12:01:00+08:00</lastmod>
   </url>
 </urlset>

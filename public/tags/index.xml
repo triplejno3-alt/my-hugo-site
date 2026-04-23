@@ -6,8 +6,78 @@
     <description>Recent content in Tags on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Apr 2026 14:45:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2026 09:33:14 +0800</lastBuildDate>
     <atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CI/CD</title>
+      <link>https://example.org/tags/ci/cd/</link>
+      <pubDate>Thu, 23 Apr 2026 09:33:14 +0800</pubDate>
+      <guid>https://example.org/tags/ci/cd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Github Actions</title>
+      <link>https://example.org/tags/github-actions/</link>
+      <pubDate>Thu, 23 Apr 2026 09:33:14 +0800</pubDate>
+      <guid>https://example.org/tags/github-actions/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>https://example.org/tags/hugo/</link>
+      <pubDate>Thu, 23 Apr 2026 09:33:14 +0800</pubDate>
+      <guid>https://example.org/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>自动化部署</title>
+      <link>https://example.org/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Thu, 23 Apr 2026 09:33:14 +0800</pubDate>
+      <guid>https://example.org/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MacOS</title>
+      <link>https://example.org/tags/macos/</link>
+      <pubDate>Thu, 23 Apr 2026 09:28:11 +0800</pubDate>
+      <guid>https://example.org/tags/macos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>快捷指令</title>
+      <link>https://example.org/tags/%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4/</link>
+      <pubDate>Thu, 23 Apr 2026 09:28:11 +0800</pubDate>
+      <guid>https://example.org/tags/%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>教程</title>
+      <link>https://example.org/tags/%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Thu, 23 Apr 2026 09:28:11 +0800</pubDate>
+      <guid>https://example.org/tags/%E6%95%99%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>自动化</title>
+      <link>https://example.org/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/</link>
+      <pubDate>Thu, 23 Apr 2026 09:28:11 +0800</pubDate>
+      <guid>https://example.org/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>快捷键</title>
+      <link>https://example.org/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Thu, 23 Apr 2026 09:24:46 +0800</pubDate>
+      <guid>https://example.org/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>生产力</title>
+      <link>https://example.org/tags/%E7%94%9F%E4%BA%A7%E5%8A%9B/</link>
+      <pubDate>Thu, 23 Apr 2026 09:24:46 +0800</pubDate>
+      <guid>https://example.org/tags/%E7%94%9F%E4%BA%A7%E5%8A%9B/</guid>
+      <description></description>
+    </item>
     <item>
       <title>效率工具</title>
       <link>https://example.org/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/</link>
@@ -51,13 +121,6 @@
       <description></description>
     </item>
     <item>
-      <title>Hugo</title>
-      <link>https://example.org/tags/hugo/</link>
-      <pubDate>Wed, 22 Apr 2026 14:20:00 +0800</pubDate>
-      <guid>https://example.org/tags/hugo/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Seo</title>
       <link>https://example.org/tags/seo/</link>
       <pubDate>Wed, 22 Apr 2026 14:20:00 +0800</pubDate>
@@ -69,20 +132,6 @@
       <link>https://example.org/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</link>
       <pubDate>Wed, 22 Apr 2026 14:20:00 +0800</pubDate>
       <guid>https://example.org/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>CI/CD</title>
-      <link>https://example.org/tags/ci/cd/</link>
-      <pubDate>Wed, 22 Apr 2026 14:10:00 +0800</pubDate>
-      <guid>https://example.org/tags/ci/cd/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Github Actions</title>
-      <link>https://example.org/tags/github-actions/</link>
-      <pubDate>Wed, 22 Apr 2026 14:10:00 +0800</pubDate>
-      <guid>https://example.org/tags/github-actions/</guid>
       <description></description>
     </item>
     <item>
@@ -104,13 +153,6 @@
       <link>https://example.org/tags/%E9%9D%99%E6%80%81%E7%AB%99%E7%82%B9/</link>
       <pubDate>Wed, 22 Apr 2026 13:50:00 +0800</pubDate>
       <guid>https://example.org/tags/%E9%9D%99%E6%80%81%E7%AB%99%E7%82%B9/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>教程</title>
-      <link>https://example.org/tags/%E6%95%99%E7%A8%8B/</link>
-      <pubDate>Wed, 22 Apr 2026 12:01:00 +0800</pubDate>
-      <guid>https://example.org/tags/%E6%95%99%E7%A8%8B/</guid>
       <description></description>
     </item>
   </channel>
