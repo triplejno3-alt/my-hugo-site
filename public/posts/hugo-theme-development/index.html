@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hugo 主题开发入门指南 | My New Hugo Site</title>
@@ -43,7 +43,7 @@
     <p>想要让你的静态站点与众不同，最好的方法就是开发一个属于自己的 Hugo 主题。本文将带你了解 Hugo 主题的基础结构和开发流程。</p>
 <h2 id="1-创建你的第一个主题">1. 创建你的第一个主题</h2>
 <p>在项目根目录下，使用 Hugo 命令行工具可以快速生成主题的骨架模板：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new theme my-custom-theme
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new theme my-custom-theme
 </span></span></code></pre></div><p>这会在 <code>themes/my-custom-theme</code> 目录下生成一组基本文件，包括布局文件、静态资源目录和配置文件 <code>theme.toml</code>。</p>
 <h2 id="2-理解布局-layouts-的查找顺序">2. 理解布局 (Layouts) 的查找顺序</h2>
 <p>Hugo 使用一种非常灵活的布局查找机制。当你渲染一个页面时，Hugo 会按照特定的顺序在 <code>layouts/</code> 目录下寻找模板。</p>
@@ -56,7 +56,7 @@
 <h2 id="3-基础页面结构">3. 基础页面结构</h2>
 <p>通常，我们可以通过 <code>baseof.html</code> 来定义整个网站的基础 HTML 结构，再结合 <code>blocks</code> 让其他页面继承它。</p>
 <p>在 <code>layouts/_default/baseof.html</code> 中：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.LanguageCode }}&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
@@ -73,7 +73,7 @@
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
 </span></span></code></pre></div><p>然后在 <code>layouts/_default/single.html</code> 中继承并填充它：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">article</span>&gt;
 </span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">h1</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
 </span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">div</span>&gt;{{ .Content }}&lt;/<span style="color:#f92672">div</span>&gt;
@@ -81,11 +81,11 @@
 </span></span><span style="display:flex;"><span>{{ end }}
 </span></span></code></pre></div><h2 id="4-主题配置参数">4. 主题配置参数</h2>
 <p>在 <code>theme.toml</code> 中填写你的主题信息，同时你可以在主题的 <code>hugo.toml</code> 中预设一些参数（Params），供用户在自己的网站中开启或关闭某些功能。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">showAuthor</span> = <span style="color:#66d9ef">true</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">footerText</span> = <span style="color:#e6db74">&#34;Copyright 2026&#34;</span>
 </span></span></code></pre></div><p>在模板中读取参数：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ if .Site.Params.showAuthor }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ if .Site.Params.showAuthor }}
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">p</span>&gt;作者：{{ .Params.author | default .Site.Params.author }}&lt;/<span style="color:#f92672">p</span>&gt;
 </span></span><span style="display:flex;"><span>{{ end }}
 </span></span></code></pre></div><p>通过这些简单的步骤，你就能开始构建出独一无二的 Hugo 主题了！</p>
